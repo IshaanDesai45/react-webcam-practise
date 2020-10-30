@@ -17,7 +17,7 @@ function GyroscopeDetection() {
 
     const deviceMotionEventHandler = (event)=>{
              requestAnimationFrame(() =>
-        setMotion({
+            setMotion({
             xAcceleration: event.acceleration.x,
             yAcceleration: event.acceleration.y,
             zAcceleration: event.acceleration.z,

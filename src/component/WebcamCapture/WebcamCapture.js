@@ -52,6 +52,7 @@ function WebcamCapture() {
                 audio={false}
                 ref={webcamRef}
                 screenshotFormat="image/jpeg"
+                videoConstraints= {{facingMode='environment'}}
             />
             <button onClick={capture} className='captureBtn'></button>
 

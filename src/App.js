@@ -8,7 +8,11 @@ function App() {
   return (
     <div className="App">
         <WebcamCapture/>
+<<<<<<< HEAD
         
+=======
+        {/* <GyroscopeDetection/> */}
+>>>>>>> parent of 0a9a63c... second commit
     </div>
   );
 }
