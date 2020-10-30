@@ -2,7 +2,7 @@ import React,{useRef,useState,useCallback} from 'react'
 import axios from 'axios'
 import './WebcamCapture.css'
 import Webcam from 'react-webcam'
-
+import GyroscopeDetection from '../GyroscopeDetection/GyroscopeDetection'
 function WebcamCapture() {
 
     const webcamRef = useRef(null);
@@ -27,7 +27,7 @@ function WebcamCapture() {
 
         const body = JSON.stringify(requ)
 
-        // console.log(body)
+        console.log(body)
 
         const config = {
             headers:{
@@ -46,7 +46,8 @@ function WebcamCapture() {
     })
     return (
         
-        <div className='webcamContainer'>
+        <>
+            <div className='webcamContainer'>
             <Webcam
                 audio={false}
                 ref={webcamRef}
@@ -59,9 +60,10 @@ function WebcamCapture() {
             {imgSrc &&(<i onClick={handleRetake} className="fas fa-reply camera-icons retake"></i>)}
             {imgSrc &&(<i onClick={handleSubmit} className="fas fa-check camera-icons save"></i>)}
             
-
+            
         </div>
-    
+        <GyroscopeDetection/>
+        </>
     )
 }
 
